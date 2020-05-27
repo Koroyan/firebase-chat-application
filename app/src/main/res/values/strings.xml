@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HomeWork17</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="zero">0</string>
+</resources>
