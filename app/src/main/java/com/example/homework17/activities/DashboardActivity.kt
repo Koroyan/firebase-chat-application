@@ -1,24 +1,17 @@
-package com.example.homework17
+package com.example.homework17.activities
 
 import android.os.Bundle
-import android.util.Log.d
-import android.view.MenuItem
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager.widget.ViewPager
+import com.example.homework17.BaseFragment
+import com.example.homework17.R
 import com.example.homework17.adapters.ViewPagerAdapter
-import com.example.homework17.ui.dashboard.DashboardFragment
+import com.example.homework17.ui.message.MessageFragment
 import com.example.homework17.ui.home.HomeFragment
 import com.example.homework17.ui.notifications.NotificationsFragment
-import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class DashboardActivity : AppCompatActivity() {
 
     private val fragments = arrayListOf<BaseFragment>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun init() {
         fragments.add(HomeFragment())
-        fragments.add(DashboardFragment())
+        fragments.add(MessageFragment())
         fragments.add(NotificationsFragment())
         viewPager.adapter = ViewPagerAdapter(supportFragmentManager, fragments)
     }
@@ -60,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         navView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> viewPager.currentItem = 0
-                R.id.navigation_dashboard-> viewPager.currentItem = 1
+                R.id.navigation_dashboard -> viewPager.currentItem = 1
                 R.id.navigation_notifications -> viewPager.currentItem = 2
             }
             true

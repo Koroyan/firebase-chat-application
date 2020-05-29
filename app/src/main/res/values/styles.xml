@@ -1,11 +1,39 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        ">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="loginBodyStyle">
+        <item name="android:background">@drawable/form_login_body</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+    <style name="loginAppName">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+    <style name="loginTextStyle">
+        <item name="android:textColor">@color/colorLoginBackground</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+    <style name="errorTextView">
+        <item name="android:textColor">@color/colorError</item>
+    </style>
+    <style name="registerTextButtonStyle">
+        <item name="android:textColor">@color/colorLoginBackground</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="userTextsStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorUserInfoTextView</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
 
 </resources>
