@@ -1,9 +1,9 @@
 package com.example.homework17.models
 
 
-class User {
-    var id:String = ""
-    var name:String = ""
-    var email:String = ""
-    var profileImage:String = ""
-}
+data class User(
+            var name:String = "",
+            var position:String = "",
+            var phone:String = "",
+            var email:String = "",
+            var profileImage:String = "empty")

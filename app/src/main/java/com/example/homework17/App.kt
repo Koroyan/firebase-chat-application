@@ -7,7 +7,7 @@ import android.content.Context
 class App: Application() {
     var context: Context? = null
     companion object{
-        val instance by lazy {
+        val instance:App by lazy {
             App()
         }
     }

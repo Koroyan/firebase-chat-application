@@ -6,20 +6,15 @@
     app:startDestination="@+id/navigation_home">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.homework17.ui.home.HomeFragment"
-        android:label="home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_users"
+        android:name="com.example.homework17.ui.users.UsersFragment"
+        android:label="@string/users"
+        tools:layout="@layout/fragment_users" />
+
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.homework17.ui.message.MessageFragment"
-        android:label="chat"
-        tools:layout="@layout/fragment_message" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.homework17.ui.notifications.NotificationsFragment"
-        android:label="notificatiob"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_profile"
+        android:name="com.example.homework17.ui.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

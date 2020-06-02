@@ -14,11 +14,10 @@
     android:layout_height="wrap_content"
     android:padding="10dp">
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/message_profile_image"
+        android:id="@+id/messageProfileImage"
         android:layout_width="52dp"
         android:layout_height="52dp"
         imageUrl="@{message.profileImage}"
-        android:src="@mipmap/ic_launcher"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -28,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        app:layout_constraintLeft_toRightOf="@+id/message_profile_image"
+        app:layout_constraintLeft_toRightOf="@+id/messageProfileImage"
         android:layout_marginStart="8dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="4dp"/>
@@ -38,18 +37,21 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="17sp"
         app:cardBackgroundColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/message_profile_name"
-        app:layout_constraintLeft_toRightOf="@+id/message_profile_image">
+        app:layout_constraintTop_toBottomOf="@+id/messageProfileImage"
+        app:layout_constraintLeft_toRightOf="@+id/messageProfileImage">
         <TextView
             android:id="@+id/messageTextView"
             android:text="@{message.text}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="50dp"
-            android:maxWidth="240dp"
+            android:maxWidth="190dp"
             android:textStyle="italic"
-            android:layout_margin="10sp"
-            android:textSize="20sp"/>
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="14sp"/>
     </androidx.cardview.widget.CardView>
     <TextView
         android:id="@+id/messageTimeTextView"

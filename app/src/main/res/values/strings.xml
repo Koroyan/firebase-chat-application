@@ -17,4 +17,11 @@
     <string name="incorrect_email_address">incorrect email address</string>
     <string name="password_confirmation_does_not_match">password confirmation does not match!</string>
     <string name="message">message</string>
+    <string name="phone">phone</string>
+    <string name="_phone">phone:</string>
+    <string name="_position">position</string>
+    <string name="mail">mail:</string>
+    <string name="position">position:</string>
+    <string name="profile">profile</string>
+    <string name="users">users</string>
 </resources>

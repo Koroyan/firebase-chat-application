@@ -6,4 +6,5 @@ object Keys {
     const val SURNAME = "surname:key"
     const val ID = "id:key"
     const val PROFILE_IMAGE_URL = "profile.image.url:key"
+    const val PICK_IMAGE_REQUEST = 1
 }

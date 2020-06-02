@@ -12,22 +12,13 @@ interface Api {
         @Body task: Message
     ): Call<Message>
 
-    @GET("/messages/{title}.json")
-    fun getMessage(@Path("title") title: String?): Call<Message?>? // could be used for fetching details or checking if item already exists
-
-    // note that we'll receive a Map here from firebase with key being the identifier
-    @get:GET("/messages/.json")
-    val allMessages: Call<HashMap<String, Message>>
-
-    @DELETE("/deleteMessage/{title}.json")
-    fun deleteMessage(@Path("title") title: String?): Call<Message?>?
-
     @PUT("users/{title}.json")
     fun createUser(@Path("title") title:String?,
-                   @Body body: User?):Call<String>
+                   @Body body: User?):Call<User>
 
     @get:GET("/users/.json")
-    val allUsers: Call<HashMap<String, User>>
-
+    val allUsers: Call<HashMap<String,User>>
+    @GET("/users/{title}.json")
+    fun getUser(@Path("title") title: String?): Call<User?>
 
 }

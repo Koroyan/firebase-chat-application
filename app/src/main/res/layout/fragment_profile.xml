@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ProfileDataBinding">
+
+        <variable
+            name="info"
+            type="com.example.homework17.models.User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:context=".ui.profile.ProfileFragment">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/addImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_add_photo"
+            app:layout_constraintBottom_toTopOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="@id/profileImage"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <ImageView
+            android:id="@+id/signOutButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="3dp"
+            android:src="@mipmap/ic_sign_out"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            imageUrl="@{info.profileImage}"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/default_profile_image"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            style="@style/nameTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@{info.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileImage" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/messageCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/colorLoginBody"
+            app:cardCornerRadius="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameTextView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mailTxtTextView"
+                    style="@style/infoTextViewsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mailTextView"
+                    style="@style/infoTextViewsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@{info.email}"
+                    app:layout_constraintBottom_toBottomOf="@id/mailTxtTextView"
+                    app:layout_constraintStart_toEndOf="@id/mailTxtTextView"
+                    app:layout_constraintTop_toTopOf="@id/mailTxtTextView" />
+
+                <TextView
+                    android:id="@+id/phoneTxtTextView"
+                    style="@style/infoTextViewsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/_phone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mailTxtTextView" />
+
+                <TextView
+                    android:id="@+id/phoneTextView"
+                    style="@style/infoTextViewsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@{info.phone}"
+                    app:layout_constraintBottom_toBottomOf="@id/phoneTxtTextView"
+                    app:layout_constraintStart_toEndOf="@id/phoneTxtTextView"
+                    app:layout_constraintTop_toTopOf="@id/phoneTxtTextView" />
+
+                <TextView
+                    android:id="@+id/positionTxtTextView"
+                    style="@style/infoTextViewsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/position"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/phoneTextView" />
+
+                <TextView
+                    android:id="@+id/positionTextView"
+                    style="@style/infoTextViewsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@{info.position}"
+                    app:layout_constraintBottom_toBottomOf="@id/positionTxtTextView"
+                    app:layout_constraintStart_toEndOf="@id/positionTxtTextView"
+                    app:layout_constraintTop_toTopOf="@id/positionTxtTextView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

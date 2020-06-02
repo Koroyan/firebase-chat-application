@@ -34,6 +34,20 @@
         <item name="android:textColor">@color/colorUserInfoTextView</item>
         <item name="android:textStyle">italic</item>
     </style>
+    <style name="nameTextViewStyle">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+    <style name="infoTextViewsStyle">
+        <item name="android:textColor">@color/colorUserInfoTextView</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="buttonStyle">
+        <item name="android:background">@drawable/ic_button</item>
+        <item name="android:textColor">@color/colorTextViews</item>
+    </style>
 
 
 </resources>
